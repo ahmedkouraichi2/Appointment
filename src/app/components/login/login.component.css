@@ -1,0 +1,19 @@
+.margin-conatiner{
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+.buton{
+  width:300px;
+  margin-left: 40px;
+}
+.buuton-rest{
+  margin-right: 40px;
+}
+.form-button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}

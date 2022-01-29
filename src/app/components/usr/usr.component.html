@@ -1,0 +1,102 @@
+<!--Form Serach -->
+<div class="container">
+  <br/>
+<div class="row justify-content-center">
+                      <div class="col-12 col-md-10 col-lg-8">
+                          <form class="card card-sm">
+                              <div class="card-body row no-gutters align-items-center">
+                                  <div class="col-auto">
+                                      <i class="fas fa-search h4 text-body"></i>
+                                  </div>
+                                  <!--end of col-->
+                                  <div class="col">
+                                      <input class="form-control form-control-lg form-control-borderless"(ngModelChange)="searchUsers(key.value)" #key="ngModel" ngModel
+                                      name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search users..." required>
+                                  </div>
+                                  <!--end of col-->
+                                  <div class="col-auto">
+                                      <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                  </div>
+                                  <!--end of col-->
+                              </div>
+                          </form>
+                      </div>
+                      <!--end of col-->
+                  </div>
+</div>
+
+<!--End Form search -->
+ <!--  <form class="form-inline my-2 my-lg-0">
+    <input type="search" (ngModelChange)="searchUsers(key.value)" #key="ngModel" ngModel
+     name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search users..." required>
+ </form> -->
+   <div *ngFor="let u of users">
+
+
+   </div>
+   <div class="container bootstrap snippets bootdey">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-box no-header clearfix">
+                <div class="main-box-body clearfix">
+                    <div class="table-responsive">
+                        <table class="table user-list">
+                            <thead>
+                                <tr>
+                                <th><span>User</span></th>
+                                <th><span>Email</span></th>
+                                <th class="text-center"><span>Role</span></th>
+                                <th><span>Phone</span></th>
+                                <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+
+
+
+                            <tbody>
+                                <tr *ngFor="let u of users">
+                                    <td>
+                                        <img src="https://bootdey.com/img/Content/user_1.jpg" alt="">
+                                        <a href="#" class="user-link">{{u.username}}</a>
+
+                                    </td>
+                                    <td>{{u.email}}</td>
+                                    <td class="text-center">
+                                        <span class="label label-default">{{u.role}}</span>
+                                    </td>
+                                    <td>
+                                        <a href="#">{{u.Email}}</a>
+                                    </td>
+                                    <td style="width: 20%;">
+                                       <!--  <a href="#" class="table-link text-warning">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a> -->
+                                        <a href="#" class="table-link text-info">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a>
+                                        <a class="table-link danger" >
+                                            <span class="fa-stack">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+

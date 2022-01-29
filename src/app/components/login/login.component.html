@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card margin-conatiner">
+      <h4 class="card-header ">Login UP Appointmnet</h4>
+      <div class="card-body">
+          <form >
+              <div class="form-group">
+                  <label for="username">Username</label>
+                   <input type="text"
+                     class="form-control"  name="username"
+                      placehoder="username"
+                  [(ngModel)]="user.username" required minlength="5"
+                  />
+
+              </div>
+              <div class="small" *ngIf="">
+                  <p>Username is required </p>
+
+              </div>
+
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input      type="password" name="password"
+                   class="form-control"
+                  placeholder="Password"
+                  [(ngModel)]="user.password"
+
+
+                  />
+
+
+                  <div  class="invalid-feedback">
+                      <div>Password is required</div>
+                  </div>
+              </div>
+              <div class="form-group form-button">
+                  <button value="lOGIN" type="button" class="btn btn-sucess buton" (click)="onLoggedin()">
+                  Login
+
+                  </button>
+                  <button  type="button" class="btn btn-sucess buton buuton-rest" routerLink="/create">Register</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
